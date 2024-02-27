@@ -1,0 +1,101 @@
+gcc -O3   -c pthread.c
+gcc -g  -O3   -o pthread pthread.o -lpthread
+TEST STARTED
+Pthread Policy is SCHED_OTHER
+rt_max_prio=99
+rt_min_prio=1
+Pthread Policy is SCHED_FIFO
+----------------------------------------------------------
+                   Trial 1
+----------------------------------------------------------
+THREAD        PRIORITY          STATUS          TIMESTAMP
+----------------------------------------------------------
+Estimating FIB_10 required iterations
+FIB_10           97            started        0 sec, 7 msec 
+FIB_10           97           Completed       0 sec, 15 msec 
+Estimating FIB_20 required iterations
+FIB_10           97            started        0 sec, 20 msec 
+FIB_10           97           Completed       0 sec, 28 msec 
+FIB_20           96            started        0 sec, 30 msec 
+FIB_10           97            started        0 sec, 40 msec 
+FIB_10           97           Completed       0 sec, 48 msec 
+FIB_20           96           Completed       0 sec, 48 msec 
+FIB_20           96            started        0 sec, 50 msec 
+FIB_20           96           Completed       0 sec, 59 msec 
+FIB_10           97            started        0 sec, 60 msec 
+FIB_10           97           Completed       0 sec, 68 msec 
+FIB_10           97            started        0 sec, 80 msec 
+FIB_10           97           Completed       0 sec, 90 msec 
+----------------------------------------------------------
+fib10 ran count 5, fib20 ran count 2
+----------------------------------------------------------
+----------------------------------------------------------
+                   Trial 2
+----------------------------------------------------------
+THREAD        PRIORITY          STATUS          TIMESTAMP
+----------------------------------------------------------
+FIB_10           97            started        0 sec, 0 msec 
+FIB_10           97           Completed       0 sec, 9 msec 
+FIB_20           96            started        0 sec, 9 msec 
+FIB_10           97            started        0 sec, 20 msec 
+FIB_10           97           Completed       0 sec, 29 msec 
+FIB_20           96           Completed       0 sec, 29 msec 
+FIB_10           97            started        0 sec, 40 msec 
+FIB_10           97           Completed       0 sec, 49 msec 
+FIB_20           96            started        0 sec, 50 msec 
+FIB_20           96           Completed       0 sec, 60 msec 
+FIB_10           97            started        0 sec, 60 msec 
+FIB_10           97           Completed       0 sec, 68 msec 
+FIB_10           97            started        0 sec, 80 msec 
+FIB_10           97           Completed       0 sec, 90 msec 
+----------------------------------------------------------
+fib10 ran count 10, fib20 ran count 4
+----------------------------------------------------------
+----------------------------------------------------------
+                   Trial 3
+----------------------------------------------------------
+THREAD        PRIORITY          STATUS          TIMESTAMP
+----------------------------------------------------------
+FIB_10           97            started        0 sec, 0 msec 
+FIB_10           97           Completed       0 sec, 9 msec 
+FIB_20           96            started        0 sec, 9 msec 
+FIB_10           97            started        0 sec, 20 msec 
+FIB_10           97           Completed       0 sec, 28 msec 
+FIB_20           96           Completed       0 sec, 28 msec 
+FIB_10           97            started        0 sec, 40 msec 
+FIB_10           97           Completed       0 sec, 55 msec 
+FIB_20           96            started        0 sec, 55 msec 
+FIB_10           97            started        0 sec, 60 msec 
+FIB_10           97           Completed       0 sec, 70 msec 
+FIB_20           96           Completed       0 sec, 74 msec 
+FIB_10           97            started        0 sec, 81 msec 
+FIB_10           97           Completed       0 sec, 89 msec 
+----------------------------------------------------------
+fib10 ran count 15, fib20 ran count 6
+----------------------------------------------------------
+TEST COMPLETE
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: TEST_STARTED
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: *************schedule started*************
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 15
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 28
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 48
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_20 completed at 48
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 68
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_20 completed at 59
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 90
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: *************schedule started*************
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 9
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 29
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_20 completed at 29
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 49
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_20 completed at 60
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 68
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 90
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: *************schedule started*************
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 9
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 28
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_20 completed at 28
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 55
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 70
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_20 completed at 74
+Feb 10 15:07:59 DESKTOP-4OVQQO0 Fibonacci[1216]: Thread FIB_10 completed at 89
