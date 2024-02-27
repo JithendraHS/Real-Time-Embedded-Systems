@@ -1,0 +1,2 @@
+Process 1 started and waiting for binary_semaphore
+Process 1 completed after receiving binary_semaphore
